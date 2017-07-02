@@ -29,12 +29,19 @@ public class Gui extends JFrame {
 
         url = new JTextField(10);
         contentPane.add(url, BorderLayout.CENTER);
+        GuiEngine guiEngine = new GuiEngine(getUrl(), this);
 
         buttonDownloader = new JButton("Download");
+        buttonDownloader.addActionListener(guiEngine);
         contentPane.add(buttonDownloader, BorderLayout.SOUTH);
 
         add(contentPane);
         setVisible(true);
 
     }
+
+    public String getUrl() {
+        return url.getText();
+    }
+
 }
