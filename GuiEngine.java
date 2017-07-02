@@ -28,7 +28,6 @@ public class GuiEngine implements ActionListener{
 
             url = new URL(strURL);
             URLConnection urlConnection = url.openConnection();
-
             fOut = new FileOutputStream("/home");
             in = urlConnection.getInputStream();
             bOutStream = new BufferedInputStream(in);
