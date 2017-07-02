@@ -12,25 +12,26 @@ public class GuiEngine implements ActionListener{
     private URL url;
     private FileOutputStream fOut;
     private InputStream in;
-    private BufferedInputStream bOutStream;
+    private BufferedReader bOutStream;
     private Gui gui;
     private String strURL;
 
 
-    public GuiEngine(String strURL, Gui gui) {
-        this.strURL = strURL;
+    public GuiEngine(Gui gui) {
         this.gui = gui;
     }
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
+        strURL = gui.getUrl();
+        System.out.println(strURL = gui.getUrl());
         try {
 
             url = new URL(strURL);
             URLConnection urlConnection = url.openConnection();
-            fOut = new FileOutputStream("/home");
+            fOut = new FileOutputStream("/home/andrey/FileDownload.mp3");
             in = urlConnection.getInputStream();
-            bOutStream = new BufferedInputStream(in);
+            bOutStream = new BufferedReader(new InputStreamReader(in));
 
             int data;
 

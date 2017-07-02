@@ -29,7 +29,8 @@ public class Gui extends JFrame {
 
         url = new JTextField(10);
         contentPane.add(url, BorderLayout.CENTER);
-        GuiEngine guiEngine = new GuiEngine(getUrl(), this);
+
+        GuiEngine guiEngine = new GuiEngine(this);
 
         buttonDownloader = new JButton("Download");
         buttonDownloader.addActionListener(guiEngine);
