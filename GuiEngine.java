@@ -17,7 +17,7 @@ public class GuiEngine implements ActionListener{
     private String strURL;
 
 
-    public GuiEngine(String strURl, Gui gui) {
+    public GuiEngine(String strURL, Gui gui) {
         this.strURL = strURL;
         this.gui = gui;
     }
