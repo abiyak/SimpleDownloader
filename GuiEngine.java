@@ -14,11 +14,11 @@ public class GuiEngine implements ActionListener{
     private InputStream in;
     private BufferedInputStream bOutStream;
     private Gui gui;
-    private String strURL = "http://myflex.org/yf/podru/budam498.mp3";
+    private String strURL;
 
 
     public GuiEngine(String strURl, Gui gui) {
-        //this.strURL = strURL;
+        this.strURL = strURL;
         this.gui = gui;
     }
 
